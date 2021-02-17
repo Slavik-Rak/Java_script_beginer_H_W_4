@@ -639,3 +639,29 @@ console.log(copy_arr_obj(users_arr));
 // Вирівняти багаторівневий масив в однорівневий
 // [1,3, ['Hello, 'Wordd', [9,6,1]], ['oops'], 9] -> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
 // ===========додаткове========
+let arr_transform = [1, 3, ['Hello', 'Wordd', [9, 6, 1]], ['oops'], 9];
+let new_arr_trans = [];
+function transform_arr_one_line(arr) {
+
+
+    for (let elem of arr) {
+
+        if (Array.isArray(elem)) {
+            transform_arr_one_line(elem);
+        } else {
+            new_arr_trans.push(elem);
+        }
+    }
+    return new_arr_trans;
+
+}
+console.log(transform_arr_one_line(arr_transform));
+
+
+
+
+
+
+
+
+
