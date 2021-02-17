@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.ugeli_div{
+    width: 60%;
+    margin: auto;
+    border: 1px solid red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.property{
+    width: 90%;
+    margin: auto;
+    border: 1px solid rgb(52, 25, 95);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.block_title {
+    background-color: tomato;
+    text-align: center;
+    border: 1px solid rgb(88, 17, 17);
+    margin: 10px;
+}
+
+.block_body {
+    background-color: rgb(30, 19, 95);
+    text-align: center;
+    border: 1px solid rgb(161, 25, 47);
+    margin: 10px;
+    color: white;
+}
