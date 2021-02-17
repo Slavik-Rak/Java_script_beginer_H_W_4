@@ -1,15 +1,17 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
-.ugeli_div{
+
+.ugeli_div {
     width: 60%;
     margin: auto;
     border: 1px solid red;
     text-align: center;
     margin-bottom: 10px;
 }
-.property{
+
+.property {
     width: 90%;
     margin: auto;
     border: 1px solid rgb(52, 25, 95);

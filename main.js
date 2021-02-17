@@ -601,6 +601,40 @@ let users_arr = [
     }
 ]
 
+console.log(users_arr);
+
+
+
+function copy_arr_obj(arr_obj) {
+    //  console.log(Array.isArray(arr_obj));
+    if (Array.isArray(arr_obj)) {
+        let new_arr_obj = [];
+
+        for (let elem of arr_obj) {
+
+            if (typeof elem === 'object') { copy_arr_obj(elem); }
+
+            new_arr_obj.push(elem);
+        }
+        return new_arr_obj
+
+    } else if (typeof arr_obj === 'object' && Array.isArray(arr_obj)) {
+
+        let new_obj = {};
+        for (let key in arr_obj) {
+
+            if (typeof arr_obj[key] === 'object') { copy_arr_obj(arr_obj[key]); }
+
+            new_obj[key] = arr_obj[key];
+        }
+        return new_obj;
+
+    }
+
+}
+console.log('copy_users_arr ')
+console.log(copy_arr_obj(users_arr));
+
 // 3) Flat
 // Вирівняти багаторівневий масив в однорівневий
 // [1,3, ['Hello, 'Wordd', [9,6,1]], ['oops'], 9] -> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
